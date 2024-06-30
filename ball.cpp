@@ -40,11 +40,12 @@ void ball::reduceSpeed(float deceleration, float time) {
 		float factor = speed / (sqrt(dx * dx + dy * dy));
 
 		// Обновляем компоненты скорости
+
 		dx *= factor;
 		dy *= factor;
 	}
 	else {
-		// Если скорость стала слишком маленькой, обнуляем компоненты
+		// if speed ball ~ 0 we stop it
 		dx = 0;
 		dx = 0;
 	}
